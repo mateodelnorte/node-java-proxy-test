@@ -14,9 +14,10 @@ public class TestInitiator {
           @Override
           public void run()
           {
-              if (Log.isEnabled()) Log.trace("" + Math.random());
+              if (Log.isEnabled()) //Log.trace("" + Math.random());
+                Log.Ping();
           }
-      }, 300, 1, TimeUnit.MILLISECONDS);
+      }, 3000, 1, TimeUnit.NANOSECONDS);
   }
 
 }

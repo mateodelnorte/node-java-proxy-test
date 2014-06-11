@@ -21,13 +21,23 @@ public class Log {
 
   private static final Log INSTANCE = new Log();
 
-  public static void trace(String message) {
-    INSTANCE.emit(message);
-  }
-
-  private void emit(String message) {
-    if (this.logger != null ) {
-      this.logger.emit(message);
+    public static void trace(String message) {
+        INSTANCE.emit(message);
     }
-  }
+
+    public static void Ping() {
+        INSTANCE.ping();
+    }
+
+    private void emit(String message) {
+        if (this.logger != null ) {
+            this.logger.emit(message);
+        }
+    }
+
+    private void ping() {
+        if (this.logger != null ) {
+            this.logger.ping();
+        }
+    }
 }
